@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your BMI</title>
+</head>
+<body>
+    <h1 style="text-align: center; font-family: cursive;">Your BMI is : {{ bmi }}</h1>
+
+    {% if category == "Underweight" %}
+        <img src="/static/underweight.jpg" alt="Underweight Guy" style="display: block; margin: 0 auto; width: 25%;">
+        <p style="text-align: center; color: blue; font-weight: bold; font-family: cursive;">You are Underweight</p>
+    {% elif category == "Normal weight" %}
+        <img src="/static/normal.jpg" alt="Normal Weight Guy" style="display: block; margin: 0 auto; width: 25%;">
+        <p style="text-align: center; color: green; font-weight: bold; font-family: cursive;">You have a Normal weight</p>
+    {% elif category == "Overweight" %}
+        <img src="/static/overweight.jpg" alt="Overweight Guy" style="display: block; margin: 0 auto; width: 25%;">
+        <p style="text-align: center; color: orange; font-weight: bold; font-family: cursive;">You are Overweight</p>
+    {% else %}
+        <img src="/static/obese.jpg" alt="Obese Guy" style="display: block; margin: 0 auto; width: 25%;">
+        <p style="text-align: center; color: red; font-weight: bold; font-family: cursive;">You are in the Obesity category</p>
+    {% endif %}
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="/" style="padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">Calculate Again</a>
+    </div>
+</body>
+</html>
